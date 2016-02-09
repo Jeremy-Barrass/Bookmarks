@@ -5,9 +5,9 @@ require 'spec_helper'
 
 feature 'Viewing links on the homepage' do
   scenario 'The user can see a list of links when the homepage loads' do
-    visit '/'
     Link.create(url: 'http://www.google.co.uk', title: 'Google')
-    # p pagße.body
+    visit '/'
+    # p page.body
     # save_and_open_page
     # expect(page).to have_xpath('http://www.google.co.uk')
     expect(page).to have_content('Google')
