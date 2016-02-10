@@ -6,12 +6,10 @@ require_relative 'models/link'
 class BookmarkManager < Sinatra::Base
   get '/' do
     @Links = Link.all
-    p @Links[0]
     erb :home
   end
 
   get '/new' do
-    "hello"
     erb :new_links
   end
 
